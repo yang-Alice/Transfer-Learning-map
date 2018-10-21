@@ -21,6 +21,8 @@
          给定一个x，经过两个CNN网络（key CNN 和 query CNN）提取特征。 key CNN的每一层都输出一列特征(k_1,k_2,...,k_T),query CNN同理输出(q_1,q_2,...,q_T).计算该层特征之间的相关性，输出该层的关联矩阵。
       2. 特征预测（feature predictor）f:输入x和关联矩阵G，输出每一层的特征，最后一层的特征见下一节。每一层的特征都是通过上一层的特征和该层的图G计算的。其中第一层仅给出x。
       3. objective function:通过2，得到最终的特征F，将最后一层的特征f_L输入到RNN的decoder中，预测出x_t。
+      4. loss：在objective function上，最大化条件概率分布。
+      <a href="https://www.codecogs.com/eqnedit.php?latex=\max&space;\sum_t\log&space;P(x_{t&plus;1},\dots,x_{t&plus;D}|x_t,f^L_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\max&space;\sum_t\log&space;P(x_{t&plus;1},\dots,x_{t&plus;D}|x_t,f^L_t)" title="\max \sum_t\log P(x_{t+1},\dots,x_{t+D}|x_t,f^L_t)" /></a>
          
      
     
