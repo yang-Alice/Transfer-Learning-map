@@ -25,7 +25,7 @@
       <a href="https://www.codecogs.com/eqnedit.php?latex=\max&space;\sum_t\log&space;P(x_{t&plus;1},\dots,x_{t&plus;D}|x_t,f^L_t)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\max&space;\sum_t\log&space;P(x_{t&plus;1},\dots,x_{t&plus;D}|x_t,f^L_t)" title="\max \sum_t\log P(x_{t+1},\dots,x_{t+D}|x_t,f^L_t)" /></a>
       在无监督学习阶段，特征预测器和图形预测器被一起训练以执行上下文预测。在迁移阶段，图形预测器被冻结并用于提取下游任务的图形。RNN 解码器应用于特征预测器中的所有位置，但是简单起见，我们仅指出了位置「A」处的一个。「Select one」表示图形可以迁移到下游任务模型中的任何层。「FF」指前馈网络。图形预测器输出的图用作「weighted sum」操作中的权重
       ![](https://github.com/yang-Alice/Transfer-Learning-map/blob/master/fig/fig2.PNG)
-     - [论文地址](http://ise.thss.tsinghua.edu.cn/~mlong/doc/selective-adversarial-networks-cvpr18.pdf)
+     - [论文地址](https://arxiv.org/abs/1806.05662)
      
     
 
