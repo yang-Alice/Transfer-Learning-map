@@ -14,13 +14,13 @@
     - [代码](https://github.com/thuml)
   - Importance Weighted Adversarial Nets for Partial Domain Adaptation
     - 分类：基于样本的迁移学习方法；解决的是在源域的标签空间包含目标域的标签空间情况下，迁移学习的问题，其中目标域无标记数据，源域中有大量的标记数据。
-    - 方法：用两个判别器，一个计算权重，一个优化目标域分类器，来放置迁移学习中的域漂移
+    - 方法：用两个判别器，一个计算权重，一个优化目标域分类器，解决迁移学习中的域漂移
     - 数据：
     ![](https://github.com/yang-Alice/Transfer-Learning-map/blob/master/fig/fig3.PNG)
       1. 首先训练源域分类器：F_s,C.其后的训练源域特征提取器都固定住。
       2. 同时优化领域判别器D,D_0和目标域特征提取器F_t。其中用源域训练好的特征提取器F_s初始化F_t
-        1. ) 通过固定住的F_s和当前的F_t得到重要权重w
-        2. ) D_0,F_t通过极小极大化博弈学习参数，通过熵最小化学习目标域分类器
+          1. ) 通过固定住的F_s和当前的F_t得到重要权重w
+          2. ) D_0,F_t通过极小极大化博弈学习参数，通过熵最小化学习目标域分类器
     - [论文地址](https://export.arxiv.org/pdf/1803.09210)
 - ### 深度迁移
   - GLoMo: Unsupervisedly Learned Relational Graphs as Transferable Representations
