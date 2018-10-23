@@ -12,6 +12,10 @@
      - 训练：通过最小化Loss求出特征提取和标签预测的参数；通过最大化Loss学习判别器的参数       
     - [论文地址](http://ise.thss.tsinghua.edu.cn/~mlong/doc/selective-adversarial-networks-cvpr18.pdf)
     - [代码](https://github.com/thuml)
+  - Importance Weighted Adversarial Nets for Partial Domain Adaptation
+    - 分类：基于样本的迁移学习方法；解决的是在源域的标签空间包含目标域的标签空间情况下，迁移学习的问题，其中目标域无标记数据，源域中有大量的标记数据。
+    - 方法：用两个判别器，一个计算权重，一个优化目标域分类器，来放置迁移学习中的域漂移
+    - 数据：
 - ### 深度迁移
   - GLoMo: Unsupervisedly Learned Relational Graphs as Transferable Representations
     - 分类：无监督迁移学习。（源域和目标域都没有标签）；学习一种结构（特征之间的关联矩阵）将它应用到即将要迁移的任务中。
@@ -26,6 +30,6 @@
       在无监督学习阶段，特征预测器和图形预测器被一起训练以执行上下文预测。在迁移阶段，图形预测器被冻结并用于提取下游任务的图形。RNN 解码器应用于特征预测器中的所有位置，但是简单起见，我们仅指出了位置「A」处的一个。「Select one」表示图形可以迁移到下游任务模型中的任何层。「FF」指前馈网络。图形预测器输出的图用作「weighted sum」操作中的权重
       ![](https://github.com/yang-Alice/Transfer-Learning-map/blob/master/fig/fig2.PNG)
      - [论文地址](https://arxiv.org/abs/1806.05662)
-     
+
     
 
